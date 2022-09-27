@@ -1,5 +1,9 @@
-# AWS-based-WebSites
-I build multiple websites such as static (on S3), serverless (with AWS Lambda), virtualized (on an EC2 virtual machine)and PaaS (AWS Beanstalk)
+# AWS based WebSites
+I build multiple websites: 
+  - static (on S3),
+  - serverless (with AWS Lambda),
+  - virtualized (on an EC2 virtual machine),
+  - PaaS (AWS Beanstalk)
 
 ## A Static S3 Website on AWS
 
