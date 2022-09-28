@@ -26,3 +26,37 @@ touch index.html
 6. To check if the website works, go to "Properties" and you find the url of the website under the section "static website hosting"
 
 http://static-website-bucket-fy.s3-website.eu-central-1.amazonaws.com/
+
+## A Serverless Website on AWS Lambda
+
+Here we build a website on which whenever we click on an URL, it will call the function of AWS Lambda. 
+
+1. We write a python function on AWS Lambda. Click on ``Create function`` and choose ``Author from scratch``. Because it will be a python function, choose the runtime as Python 3.9
+
+```python
+
+import json
+
+def lambda_handler(event, context):
+    content = """
+    <html>
+    <p> My first Lambda website </p>
+    </html>
+    """
+    response = {
+        "statusCode": 200,
+        "body": content,
+        "headers": {"Content-Type": "text/html",},
+    }
+    return response
+
+```
+
+2. After ``Deploy``ing the code, we add a ``trigger``. In the configuration page choose API Gateway and then HTTP API. Security: Open.
+
+3. Saving it will open the main page and there (API Gateway) we find: 
+
+https://6g6dmvg209.execute-api.eu-central-1.amazonaws.com/default/WebFunction
+
+
+
