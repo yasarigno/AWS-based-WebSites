@@ -73,7 +73,9 @@ File > Upload a file... Upload the PEM file. Be sure that it is located under th
 
 3. Create a security group.
 
-Go to the EC2 console ``Security Groups``  In section "Inbound rules" set ``Port Range = 0`` and ``Source = 0.0.0.0/0`` (meaning it can be connected from anywhere)
+Go to the EC2 console ``Security Groups``  In section "Inbound rules" set ``Port Range = 20`` and ``Source = 0.0.0.0/0`` (meaning it can be connected from anywhere)
+
+Do the same for Port Range = 80.
 
 4. Request spot instance and launch.
 
