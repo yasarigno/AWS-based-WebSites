@@ -58,7 +58,8 @@ def lambda_handler(event, context):
 
 https://6g6dmvg209.execute-api.eu-central-1.amazonaws.com/default/WebFunction
 
-# A Website on an EC2 Virtual Machine - a good idea as well as for building other things using a VM.
+## A Website on an EC2 Virtual Machine 
+### - a good idea as well as for building other things using a VM.
 
 The website will be built on an EC2 instance, therefore, the server will always be running. Unlike a static website you will be paying for it. We start with Cloud9 and register a new PEM file to have a SSH connection between Cloud9 and a new EC2 instance.
 
