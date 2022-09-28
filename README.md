@@ -90,3 +90,8 @@ Click on the new instance and in the following page ``connect``.
 
 On SSH client tab, follow the instructions. (we have already created PEM key etc.)
 
+## A Website using PaaS with AWS Beanstalk
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html
+
+
