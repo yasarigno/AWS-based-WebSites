@@ -58,5 +58,32 @@ def lambda_handler(event, context):
 
 https://6g6dmvg209.execute-api.eu-central-1.amazonaws.com/default/WebFunction
 
+# A Website on an EC2 Virtual Machine - a good idea as well as for building other things using a VM.
 
+The website will be built on an EC2 instance, therefore, the server will always be running. Unlike a static website you will be paying for it. We start with Cloud9 and register a new PEM file to have a SSH connection between Cloud9 and a new EC2 instance.
+
+1. Create a PEM file.
+
+Go to the EC2 console ``Key Pairs`` and name a new key. Once created it will automatically download the key on your computer.
+
+2. Upload this key on the Cloud9 environment. 
+
+File > Upload a file... Upload the PEM file. Be sure that it is located under the main folder.
+
+
+3. Create a security group.
+
+Go to the EC2 console ``Security Groups``  In section "Inbound rules" set ``Port Range = 0`` and ``Source = 0.0.0.0/0`` (meaning it can be connected from anywhere)
+
+4. Request spot instance and launch.
+
+Go to the EC2 console ``Spot Requests`` and follow "request spot instances"
+
+Under the section "Key pair name" select the key that you have uploaded to Cloud9 environment. Select the security group ``ec2websitegroup`` (this is the one created)  under "Additional launch parameters" 
+
+5. On the EC2 console ``Instances`` a new instance will appear (wait and refresh if not!) Then it is better to name it as well.
+
+Click on the new instance and in the following page ``connect``.
+
+On SSH client tab, follow the instructions. (we have already created PEM key etc.)
 
